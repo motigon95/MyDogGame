@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentFight">
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btnAttack"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="Attack"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btnDefend"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="Defend"
+                android:layout_toEndOf="@id/btnAttack"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btnItems"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="Items"
+                android:layout_below="@id/btnAttack"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btnEscape"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="Escape"
+                android:layout_toEndOf="@id/btnItems"
+                android:layout_below="@id/btnDefend"
+                android:textSize="10sp"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewOwn"
+        android:layout_width="180dp"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewOwn"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background" />
+
+            <ProgressBar
+                android:id="@+id/healthBarOwn"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewNameOwn"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textViewNameOwn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewOwn"
+                android:layout_centerHorizontal="true"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textCurrentHPOwn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/healthBarOwn"
+                android:layout_alignStart="@+id/healthBarOwn"
+                android:text="60"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textMaxHPOwn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/healthBarOwn"
+                android:layout_alignEnd="@+id/healthBarOwn"
+                android:text="120"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="10dp"
+        android:id="@+id/cardViewEnemy"
+        android:layout_width="180dp"
+        android:layout_height="210dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewEnemy"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background" />
+
+            <ProgressBar
+                android:id="@+id/healthBarEnemy"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewNameEnemy"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textViewNameEnemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewEnemy"
+                android:layout_centerHorizontal="true"
+                android:text="Enemy" />
+
+            <TextView
+                android:id="@+id/textCurrentHPEnemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/healthBarEnemy"
+                android:layout_alignStart="@+id/healthBarEnemy"
+                android:text="60"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textMaxHPEnemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/healthBarEnemy"
+                android:layout_alignEnd="@+id/healthBarEnemy"
+                android:text="120"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutConsola"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/textViewConsola"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="textStart"
+            android:text="ejemplo consola"
+            android:layout_margin="5dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

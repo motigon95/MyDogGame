@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutCharCreation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgViewSelectPhoto"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <Button
+                android:id="@+id/btnSelectImg"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgViewSelectPhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Select from gallery"
+                android:textColor="@color/navy"/>
+
+            <EditText
+                android:id="@+id/edtTxtPlayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSelectImg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Select name" />
+
+
+            <TextView
+                android:id="@+id/textViewDistributeSklPts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtTxtPlayerName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Please distribute 13 Skill Points:" />
+
+            <TextView
+                android:id="@+id/textViewAtkPts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDistributeSklPts"
+                android:layout_alignStart="@+id/textViewDistributeSklPts"
+                android:layout_marginTop="20dp"
+                android:text="Attack" />
+
+            <EditText
+                android:id="@+id/editTextAtkPtsSlct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewAtkPts"
+                android:layout_alignStart="@+id/textViewAtkPts"
+                android:layout_alignEnd="@+id/textViewAtkPts"
+                android:ems="3"
+                android:inputType="numberSigned"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/textViewDfcPts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewDistributeSklPts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Defence" />
+
+
+            <EditText
+                android:id="@+id/editTextDfcPtsSlct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDfcPts"
+                android:layout_alignStart="@+id/textViewDfcPts"
+                android:layout_alignEnd="@+id/textViewDfcPts"
+                android:ems="3"
+                android:inputType="numberSigned"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/textViewAglPts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewDistributeSklPts"
+                android:layout_alignEnd="@+id/textViewDistributeSklPts"
+                android:layout_marginTop="20dp"
+                android:text="Agility" />
+
+
+            <EditText
+                android:id="@+id/editTextAglPtsSlct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewAglPts"
+                android:layout_alignStart="@+id/textViewAglPts"
+                android:layout_alignEnd="@+id/textViewAglPts"
+                android:ems="3"
+                android:inputType="numberSigned"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textViewErrorCharCreation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextDfcPtsSlct"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/btnContinueCharacter"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewErrorCharCreation"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="Continue"
+                android:textColor="@color/navy"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
